@@ -4,6 +4,7 @@ package bot.api;
 import bot.domain.user.Rating;
 import net.dv8tion.jda.api.EmbedBuilder;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -25,4 +26,8 @@ public interface CodeforcesAPI {
 
     // Get a random problem
     EmbedBuilder getRandomProblem(List<String> tagsList, int rateStart, int rateEnd) throws IOException;
+
+    File getProblemRatings(String handle) throws IOException;
+
+    File compareProblemRatings(String handle1, String handle2) throws IOException;
 }
